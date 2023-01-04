@@ -16,6 +16,4 @@ else:
     if i == 0:
         print("Last digit of {number:d} is {i:d} and is 0")
     else:
-        i = number % 10
-        j = i * (-1)
-        print(f"Last digit of {number:d} is {j:d} and is less than 6 and not 0")
+        print(f"Last digit of {number:d} is {i:d} and is less than 6 and not 0")
