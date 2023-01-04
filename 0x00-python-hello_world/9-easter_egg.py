@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-f = open('zen.py', 'r')
+f = open('pyzen.py', 'r')
 content = f.read()
 print(content)
 f.close()
