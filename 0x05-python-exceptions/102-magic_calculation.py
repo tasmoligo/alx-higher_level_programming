@@ -9,4 +9,5 @@ def magic_calculation(a, b):
                 answer += a ** b / i
         except:
             answer = a + b
+	    break
     return answer
