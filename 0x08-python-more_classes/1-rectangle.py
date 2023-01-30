@@ -8,8 +8,8 @@ class Rectangle:
         '''Instantiates then class
         width and height are defaulted to 0
         '''
-        self.width = width
         self.height = height
+        self.width = width
 
     @property
     def width(self):
