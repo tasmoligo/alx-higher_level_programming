@@ -1,0 +1,58 @@
+Imports the function that adds two integers.
+============================================
+
+***According to the function, when the second argument is not given,
+          it is 98 by default.
+
+          parameter and type:
+    a : int or float
+    b : int or float
+
+    Returns an int ***
+
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+
+=====It can add two integers whether positive or negative=====
+
+>>> print(add_integer(1, 2))
+3
+>>> print(add_integer(100, -2))
+98
+>>> print(add_integer(-2, -3))
+-5
+
+
+=====If only one argument is given, the second one is defaulted to 98=====
+
+>>> print(add_integer(2))
+100
+
+
+=====It can also add float-float or integer-float numbers.=====
+
+>>> print(add_integer(100.3, -2))
+98
+>>> print(add_integer(100.3, -2.4))
+97
+
+
+=====Argument(s) must not be strings.=====
+
+>>> try:
+...     print(add_integer(4, "School"))
+... except Exception as e:
+...     print(e)
+...
+b must be an integer
+>>> try:
+...     print(add_integer(None))
+... except Exception as e:
+...     print(e)
+...
+a must be an integer
+
+>>> add_integer(98, "School")
+Traceback (most recent call last):
+TypeError: b must be an integer
