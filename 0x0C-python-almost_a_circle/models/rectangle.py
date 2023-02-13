@@ -1,28 +1,6 @@
 #!/usr/bin/python3
-'''
-Defines the Base class
-'''
-
-
-class Base:
-    '''
-    Initializes with a private class attribute
-    Defines the __init__():
-        argument:
-            id: initialized to None
-    '''
-    __nb_objects = 0
-
-    def __init__(self, id=None):
-        '''
-        when id is None, the private class attribute is incremented
-        and assigned to the public instance attribute
-        '''
-        if id is not None:
-            self.id = id
-        else:
-            Base.__nb_objects += 1
-            self.id = Base.__nb_objects
+'''Defines a rectangle class which inherits from Base'''
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -37,10 +15,27 @@ class Rectangle(Base):
             height: an int
             x: an int
             y: an int
+            id: an int
         '''
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        if width <= 0:
+            raise ValueError("width must be > 0")
         self.__width = width
+        if not isinstance(height, int):
+            raise TypeError("height must be an integer")
+        if height <= 0:
+            raise ValueError("height must be > 0")
         self.__height = height
+        if not isinstance(x, int):
+            raise TypeError("x must be an integer")
+        if x < 0:
+            raise ValueError("x must be >= 0")
         self.__x = x
+        if not isinstance(y, int):
+            raise TypeError("y must be an integer")
+        if y < 0:
+            raise ValueError("y must be >= 0")
         self.__y = y
         super().__init__(id)
 
