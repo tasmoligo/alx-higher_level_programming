@@ -101,7 +101,7 @@ class Rectangle(Base):
         r2 = f" - {self.width}/{self.height}"
         return r1 + r2
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         '''Assigns an argument to each attribute'''
         if args or len(args) != 0:
             for i in range(len(args)):
@@ -117,3 +117,18 @@ class Rectangle(Base):
                     self.x = args[i]
                 if i == 4:
                     self.y = args[i]
+        else:
+            if kwargs or len(kwargs) != 0:
+                for k, v in kwargs.items():
+                    if v is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    if k == "id":
+                        self.id = v
+                    if k == "width":
+                        self.width = v
+                    if k == "height":
+                        self.height = v
+                    if k == "x":
+                        self.x = v
+                    if k == "y":
+                        self.y = v
