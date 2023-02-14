@@ -38,8 +38,7 @@ class TestBase_Instantiation(unittest.TestCase):
         self.assertEqual(complex(3), Base(complex(3)).id)
 
     def test_dict_id(self):
-        self.assertEqual({"Battery": 98, "school": 1}, Base({"Battery": 98, "
-                                                             "school": 1}).id)
+        self.assertEqual({"Bat": 9, "sch": 1}, Base({"Bat": 9, "sch": 1}).id)
 
     def test_bool_id(self):
         self.assertEqual(True, Base(True).id)
