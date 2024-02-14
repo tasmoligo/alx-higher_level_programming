@@ -124,3 +124,9 @@ class Rectangle(Base):
                     self.x = v
                 elif k == "y":
                     self.y = v
+    def to_dictionary(self):
+        """ Returns the dictionary representation of a rectangle. """
+        dict_rep = {"id": self.id, "width": self.__width, "height": self.height,
+                    "x": self.__x, "y": self.__y}
+        return dict_rep
+    
