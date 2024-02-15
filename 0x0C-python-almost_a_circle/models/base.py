@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ Module for class """
+
 import json
 
 
@@ -28,7 +29,7 @@ class Base:
         return json.dumps(list_dictionaries)
 
     @classmethod
-    def save_to_file(cls, list_objs):
+    def save_to_filels(cls, list_objs):
         """ Writes the JSON string representation of list_objs to a file. """
         filename = __class__.__name__ + ".json"
         with open(filename, "w") as openfile:
@@ -37,4 +38,4 @@ class Base:
             else:
                 for arg in list_objs:
                     json_string = arg.to_dictionary()
-                openfile.write(Base.to_json_string(json_string))
+                openfile.write(Base.to_json_string(json_string)
