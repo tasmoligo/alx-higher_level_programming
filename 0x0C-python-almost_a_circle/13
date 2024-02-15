@@ -14,4 +14,8 @@ if __name__ == "__main__":
     print(r2)
     r2.update(**r1_dictionary)
     print(r2)
+<<<<<<< HEAD
     print(r1 == r2)
+=======
+    print(r1 == r2)
+>>>>>>> e3d7e922f190cf8124329ea8127f2881cac90e2e

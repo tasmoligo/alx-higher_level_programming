@@ -25,7 +25,7 @@ class Base:
             return "[]"
         if not isinstance(list_dictionaries, list) \
                 or not all(isinstance(i, list) for i in list_dictionaries):
-            raise TypeErroe("not a list of dictionary")
+            raise TypeError("list_dictionaries must be a list of dictionary")
         return json.dumps(list_dictionaries)
 
     @classmethod
