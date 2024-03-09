@@ -5,4 +5,3 @@
 SELECT id, name FROM cities WHERE state_id = (SELECT id from states WHERE name = "California") ORDER BY id;
 =======
 SELECT id, name FROM cities WHERE state_id = (SELECT id FROM states WHERE name = "California") ORDER BY id;
->>>>>>> 7ffbaf1be0c5bca9127b9c9689cbca622fea8ead
