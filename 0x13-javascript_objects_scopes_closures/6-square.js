@@ -6,9 +6,8 @@ class Square extends Rectangle {
     super(size, size);
   }
 
-  /* prints the rectangle using the character c
-   * - If c is undefined, use the character X
-   */
+  // prints the rectangle using the character c
+  // If c is undefined, use the character X
   charPrint (c) {
     const character = c === undefined ? 'X' : 'C';
     for (let i = 0; i < this.width; i++) {
