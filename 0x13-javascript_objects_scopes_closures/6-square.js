@@ -9,7 +9,7 @@ class Square extends Rectangle {
   // prints the rectangle using the character c
   // If c is undefined, use the character X
   charPrint (c) {
-    const character = c === undefined ? 'X' : 'C';
+    const character = c === undefined ? 'X' : c;
     for (let i = 0; i < this.width; i++) {
       let printout = '';
       for (let j = 0; j < this.height; j++) {
