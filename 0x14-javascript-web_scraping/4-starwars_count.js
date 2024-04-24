@@ -15,8 +15,8 @@ request.get(url, (err, response, body) => {
         if (actor.includes(characterId)) {
           characterCount += 1;
         }
-      });
-    });
+      }); 
+    }); 
     console.log(characterCount);
   }
 });
